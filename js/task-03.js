@@ -13,11 +13,12 @@ const images = [
   },
 ];
 
-
-const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector(".gallery");
 
 const photo = images
-  .flatMap((image) => `<li><img src=${image.url} alt=${image.alt} width = 250 height = 150></li>`)
-  .join('');
+  .flatMap(
+    (image) =>
+      `<li><img src=${image.url} alt=${image.alt} width = 250 height = 150></li>`
+  )
+  .join("");
 gallery.insertAdjacentHTML("beforeend", photo);
-

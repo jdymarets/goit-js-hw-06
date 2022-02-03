@@ -9,7 +9,7 @@ const ingredients = [
 
 const ingredientsEL = document.querySelector("ul");
 
-const makeElementList = names => {
+const makeElementList = (names) => {
   return names.map(name => {
     const navitemEl = document.createElement("li");
     navitemEl.classList.add("item");
