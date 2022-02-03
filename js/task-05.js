@@ -1,10 +1,9 @@
-let input = document.getElementById("name-input");
-let nameOutput = document.getElementById("name-output");
+const nameInput = document.querySelector("#name-input");
+const nameOutput = document.querySelector("#name-output");
 
-input.oninput = function () {
-    if (input.value === '') {
-       nameOutput.innerHTML = 'Anonymous';
-    } else{
-    nameOutput.innerHTML = input.value;
-    }
-}
+nameInput.addEventListener("input", (event) => {
+  nameOutput.textContent = "Anonimous";
+  if (event.currentTarget.value !== "") {
+    nameOutput.textContent = event.currentTarget.value;
+  }
+});
